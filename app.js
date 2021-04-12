@@ -40,7 +40,7 @@ todoContainer.addEventListener('contextmenu', (e) => {
   e.preventDefault();
 
   todoList.forEach((item, index) => {
-    if (item.todo === e.target.innerHTML) {
+    if (item.todo === e.target.innerHTML &&  e.target.tagName === 'LABEL') {
       if (e.ctrlKey || e.metaKey) {
         todoList.splice(index, 1);
       } else {
